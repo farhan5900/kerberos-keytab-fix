@@ -18,7 +18,7 @@ public class KrbFixMain {
 			System.exit(1);
 		}
 		System.out.println("Fixing KeyTab File..."+keytabPath);
-		String keytabOut = "hdfs.keytab.tmp";
+		String keytabOut = "hdfs.keytab";
 		Keytab keytab = Keytab.loadKeytab(keytabFile);
 		
 		keytab.store(new File(keytabOut));
