@@ -29,7 +29,10 @@ public class KrbTestMain {
 				spnegoPrincipals = new String[]{principal};
 			}
 			System.out.println("Read Number of Principals: " + spnegoPrincipals.length);
-			System.out.println("Read First Principal: " + spnegoPrincipals[0]);
+                        System.out.println("All Read Principals: ");
+			for(String principals: spnegoPrincipals) {
+				System.out.println("\t" + principals);
+			}
 		} catch (IOException ex) {
 			System.err.println(ex);
 		}

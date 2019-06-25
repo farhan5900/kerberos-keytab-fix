@@ -42,7 +42,11 @@ public class KeytabOutputStream extends KrbOutputStream {
         writeCountedString(realm);
 
         for (String nameCom : nameStrings) {
-            writeCountedString(nameCom);
+            if(nameCom == null) {
+                writeCountedString("null");
+            } else {
+                writeCountedString(nameCom);
+            }
         }
 
         writeInt(principal.getNameType().getValue()); // todo: consider the version
